@@ -17,9 +17,9 @@ function App() {
         let formattedDate = date.toLocaleString();
         return (
           <div key={index} className="relative rounded overflow-hidden shadow-lg m-2">
-            <img className="object-cover" src={image['ss.jpg']} alt="" />
+            <img className="object-cover" src={image['ss.jpg']} alt="This is a screenshot of code" />
             <div className="absolute top-0 right-0 w-1/4">
-              <img className="rounded w-full h-full object-cover" src={image['pic.jpg']} alt="" />
+              <img className="rounded w-full h-full object-cover" src={image['pic.jpg']} alt="This is a picture of the person who committed" />
             </div>
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">{image.commit_message}</div>
