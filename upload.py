@@ -22,10 +22,10 @@ bucket_name = os.getenv('S3_BUCKET')
 timestamp, commit_message, author = sys.argv[1], sys.argv[2], sys.argv[3]
 
 # Define the name you want to give it in S3
-pictureName = f'pictures/{timestamp}/pic'
-picturePath = f'./{timestamp}/pic'
-screenshotName = f'pictures/{timestamp}/ss'
-screenshotPath = f'./{timestamp}/ss'
+pictureName = f'pictures/{timestamp}/pic.jpg'
+picturePath = f'./{timestamp}/pic.jpg'
+screenshotName = f'pictures/{timestamp}/ss.jpg'
+screenshotPath = f'./{timestamp}/ss.jpg'
 
 metadata = {'commit_message': commit_message, 'timestamp': timestamp, 'author': author}
 
