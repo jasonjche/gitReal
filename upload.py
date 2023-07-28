@@ -35,4 +35,4 @@ try:
     s3.Bucket(bucket_name).upload_file(screenshotPath, screenshotName)
     print("Upload Successful")
 except FileNotFoundError:
-    print("The file was not found")
+    print("The file was not found!")
