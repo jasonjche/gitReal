@@ -3,7 +3,7 @@ function ImageComponent({ image, handleImageClick }) {
   let formattedDate = date.toLocaleString();
 
   return (
-    <div className="relative rounded overflow-hidden shadow-lg m-2">
+    <div className="relative rounded overflow-hidden shadow-lg m-2 animate-fade-in">
       <img className="object-cover" src={image['ss.jpg']} alt="" />
       <div className="absolute top-0 right-0 w-1/4">
         <img className="rounded w-full h-full object-cover" src={image['pic.jpg']} alt="" onClick={() => handleImageClick(image)} />
