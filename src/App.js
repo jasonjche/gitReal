@@ -9,6 +9,13 @@ function App() {
       .then(data => setImages(data));
   }, []);
 
+  const handleImageClick = (image) => {
+    let temp = image['ss.jpg'];
+    image['ss.jpg'] = image['pic.jpg'];
+    image['pic.jpg'] = temp;
+    setImages([...images]);
+  }
+
   return (
     <div className="grid grid-cols-1 gap-4 bg-black text-white">
       <h1 className="text-4xl text-center pt-4 font-bold">GitReal.</h1>
@@ -17,9 +24,9 @@ function App() {
         let formattedDate = date.toLocaleString();
         return (
           <div key={index} className="relative rounded overflow-hidden shadow-lg m-2">
-            <img className="object-cover" src={image['ss.jpg']} alt="This is a screenshot of code" />
+            <img className="object-cover" src={image['ss.jpg']} alt="" />
             <div className="absolute top-0 right-0 w-1/4">
-              <img className="rounded w-full h-full object-cover" src={image['pic.jpg']} alt="This is a picture of the person who committed" />
+              <img className="rounded w-full h-full object-cover" src={image['pic.jpg']} alt="" onClick={() => handleImageClick(image)}/>
             </div>
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">{image.commit_message}</div>
