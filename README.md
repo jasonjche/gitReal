@@ -2,7 +2,7 @@
 
 ## Description
 
-GitReal is an application that allows you to keep you and your friends accountable with coding by looking at each other's commits. Simply install the necessary Git Hooks, and commit away!!!
+GitReal is an application that allows you to keep you and your friends accountable with coding by looking at each other's commits. Simply install the necessary Git Hooks, and commit away!
 
 ## Installation
 
