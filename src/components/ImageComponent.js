@@ -11,7 +11,7 @@ function ImageComponent({ image, handleImageClick }) {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{image.commit_message}</div>
         <p className="text-white text-base">
-          {formattedDate} by <strong>{image.author}</strong>
+          On <strong>{formattedDate}</strong> by <strong>{image.author}</strong>
         </p>
       </div>
     </div>
