@@ -5,7 +5,7 @@ function InstallHookInstructions() {
     const [copied, setCopied] = useState(false);
 
     const handleCopyClick = () => {
-        const command = 'bash <(curl -s https://raw.githubusercontent.com/jasonjche/gitreal/main/install_hook.sh)';
+        const command = 'bash <(curl -s https://raw.githubusercontent.com/jasonjche/gitReal/main/install_hook.sh)';
         navigator.clipboard.writeText(command);
         setCopied(true);
     };
@@ -32,7 +32,7 @@ function InstallHookInstructions() {
                                                 To install the Git hook, please copy and paste the following command into your terminal:
                                             </p>
                                             <div className="mt-2 bg-neutral-700 rounded p-2 text-sm font-mono text-white">
-                                                bash &lt;(curl -s https://raw.githubusercontent.com/jasonjche/gitreal/main/install_hook.sh)
+                                                bash &lt;(curl -s https://raw.githubusercontent.com/jasonjche/gitReal/main/install_hook.sh)
                                             </div>
                                             <div className=''>
                                                 <button onClick={handleCopyClick} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
