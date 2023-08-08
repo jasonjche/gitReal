@@ -16,9 +16,9 @@ function App() {
   }, []);
 
   const handleImageClick = useCallback((image) => {
-    let temep = image['ss.jpg'];
+    let temp = image['ss.jpg'];
     image['ss.jpg'] = image['pic.jpg'];
-    image['pic.jpg'] = temep;
+    image['pic.jpg'] = temp;
     setImages([...images]);
   }, [images]);
 
