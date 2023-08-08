@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import ImageComponent from './components/ImageComponent';
 import LoadingSpinnerComponent from './components/LoadingSpinnerComponent';
+import InstallHookInstructions from './components/InstallHookInstructions';
 
 function App() {
   const [images, setImages] = useState([]);
@@ -24,7 +25,12 @@ function App() {
 
   return (
     <div className="grid grid-cols-1 gap-4 bg-black text-white">
-      <h1 className="text-4xl text-center pt-4 font-bold">GitReal.</h1>
+      <div className="flex justify-between items-center px-4 py-2">
+        <h1 className="text-4xl font-bold">GitReal.</h1>
+        <div className="top-0 right-0 pt-4 pr-4">
+          <InstallHookInstructions />
+        </div>
+      </div>
       {loading ? (
         <LoadingSpinnerComponent />
       ) : (
