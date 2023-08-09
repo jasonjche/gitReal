@@ -13,7 +13,7 @@ function InstallHookInstructions() {
     return (
         <div>
             <button onClick={() => setShowModal(true)} className="text-white font-bold bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded">
-                Install GitReal
+                Install
             </button>
             {showModal && (
                 <div className="fixed z-10 inset-0">

@@ -33,12 +33,6 @@ if ! command -v base64 &> /dev/null; then
     exit 1
 fi
 
-# Check if the jq command is available for parsing JSON response
-if ! command -v jq &> /dev/null; then
-    echo "Error: jq command not found!"
-    exit 1
-fi
-
 # Get timestamp, commit message, and author
 timestamp=$(date +%s)
 commit_message=$(git log --format=%s -1)
