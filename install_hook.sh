@@ -18,18 +18,29 @@ function countdown {
         sleep 1
         ((count--))
     done
-    echo "Smile!"
 }
 
-# Check if the required tools (imagesnap and screencapture) are installed
+if ! command -v brew &> /dev/null; then
+    echo "Error: Homebrew is not installed!"
+    echo "Please install Homebrew from https://brew.sh/ and try again."
+    exit 1
+fi
+
+# Check if imagesnap and screencapture tools are installed
 if ! command -v imagesnap &> /dev/null || ! command -v screencapture &> /dev/null; then
     echo "Error: imagesnap and/or screencapture tools are not installed!"
+    echo "Installing imagesnap..."
+    brew install imagesnap
+    echo "Installing screencapture..."
+    brew install coreutils
     exit 1
 fi
 
 # Check if the base64 command is available
 if ! command -v base64 &> /dev/null; then
     echo "Error: base64 command not found!"
+    echo "Installing base64..."
+    brew install base64
     exit 1
 fi
 
