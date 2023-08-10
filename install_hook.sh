@@ -10,16 +10,6 @@ fi
 read -r -d '' hook_content << 'EOM'
 #!/bin/bash
 
-# Function to perform countdown
-function countdown {
-    local count=$1
-    while [ $count -gt 0 ]; do
-        echo "Countdown: $count"
-        sleep 1
-        ((count--))
-    done
-}
-
 if ! command -v brew &> /dev/null; then
     echo "Error: Homebrew is not installed!"
     echo "Please install Homebrew from https://brew.sh/ and try again."
@@ -48,10 +38,6 @@ fi
 timestamp=$(date +%s)
 commit_message=$(git log --format=%s -1)
 author=$(git log --format=%an -1)
-
-# Perform countdown
-duration=3
-countdown $duration
 
 # Create timestamp directory and capture images
 mkdir "$timestamp"
