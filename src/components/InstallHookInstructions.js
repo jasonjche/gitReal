@@ -27,7 +27,7 @@ function InstallHookInstructions() {
                         <div className="bg-neutral-900 text-white p-6">
                             <h3 className="text-lg leading-6 font-medium text-white">Install Git Hook</h3>
                             <p className="mt-2 text-sm text-neutral-300">
-                                To install the Git hook, please copy and paste the following command into your terminal <strong>(make sure to have Homebrew installed)</strong>
+                                To install the Git hook, please copy and paste the following command into your project terminal <strong>(make sure to have Homebrew installed)</strong>
                             </p>
                             <div className="mt-2 bg-neutral-700 rounded p-2 text-sm font-mono text-white whitespace-nowrap">
                                 bash &lt;(curl -s https://raw.githubusercontent.com/jasonjche/gitReal/main/install_hook.sh)
